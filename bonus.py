@@ -1,14 +1,21 @@
 import sys
-
-# Take salary from command line
-salary = float(sys.argv[1])
-
-# Calculate 10% bonus
-bonus = salary * 0.10
-total = salary + bonus
-
-# Display results
-print("----- Salary Bonus Calculator -----")
-print("Salary:", salary)
-print("Bonus (10%):", bonus)
-print("Total Salary after Bonus:", total)
+if len(sys.argv) == 3:
+  script_name = sys.argv[0]
+  salary = float(sys.argv[1])
+  bonus = float(sys.argv[2])*0.10
+  print("user provided input values:")
+  print("script name:", script_name)
+  print("salary:", salary)
+  totalsalary = bonus + salary
+  
+  print("total salary :",totalsalary)
+else:
+  script_name = sys.argv[0]
+  salary = "1000"
+  bonus = "10000 * 0.10"
+  print("no input given:")
+  print("script name:", script_name)
+  print("salary:", salary)
+  totalsalary = bonus + salary
+  
+  print("total salary:",totalsalary)
